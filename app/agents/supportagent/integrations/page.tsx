@@ -73,6 +73,9 @@ function Integrations() {
       >
         <VStack alignItems={"start"}>
           <Text>Embed Code</Text>
+          <Text w={"500px"} mt={"5px"} color={"#808080"} fontSize={"14px"}>
+            Add the code below to your website to add the chat widget
+          </Text>
 
           <Flex
             w={"95%"}

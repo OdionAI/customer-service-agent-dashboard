@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import { Image } from "@chakra-ui/react";
 import NextImage from "next/image";
@@ -40,11 +40,10 @@ function SidebarMenu({ title, link, icon }: SidebarMenuProps) {
           </Image>
         </Box>
         {/* Render the title only when not collapsed */}
-        {/* {!isCollapsed && (
-          <Text fontSize="13px" md={{ fontSize: "16px" }} color={textColor}>
-            {title}
-          </Text>
-        )} */}
+
+        <Text fontSize="13px" md={{ fontSize: "16px" }} color={"black"}>
+          {title}
+        </Text>
       </Flex>
     </Box>
   );
