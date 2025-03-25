@@ -19,7 +19,15 @@ function Navbar() {
           alignItems={"center"}
           justifyContent={"space-between"}
         >
-          <Image alt="odion logo" asChild>
+          <Image
+            visibility={
+              !pathname.startsWith("/agents/supportagent")
+                ? "visible"
+                : "hidden"
+            }
+            alt="odion logo"
+            asChild
+          >
             <NextImage
               width={30}
               height={30}
