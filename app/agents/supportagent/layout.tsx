@@ -42,6 +42,7 @@ export default function DashboardLayout({
               alt="odion logo"
             />
           </Image>
+
           {/* Pass the collapsed state down to each menu item */}
           {supportNavigationItems.map((item) => (
             <SidebarMenu

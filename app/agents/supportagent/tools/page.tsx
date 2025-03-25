@@ -40,23 +40,6 @@ function Tools() {
         >
           Save Changes
         </Button>
-        <Button
-          w={"110px"}
-          fontSize={"13px"}
-          h={"35px"}
-          borderRadius={"100px"}
-          paddingX={"15px"}
-        >
-          <Image alt="Odion logo" asChild>
-            <NextImage
-              width={15}
-              height={15}
-              src="/icons/odion_white_logo.svg"
-              alt="Odion logo"
-            />
-          </Image>
-          <Text>Test Agent</Text>
-        </Button>
       </HStack>
 
       <Box mt={"30px"}>
