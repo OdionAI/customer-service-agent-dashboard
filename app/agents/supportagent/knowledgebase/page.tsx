@@ -18,7 +18,7 @@ import NextImage from "next/image";
 
 function Agent() {
   const [files, setFiles] = useState<File[]>([]);
-  const [isDragOver, setIsDragOver] = useState(false);
+  // const [isDragOver, setIsDragOver] = useState(false);
 
   // Append selected files to the list
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -34,21 +34,21 @@ function Agent() {
   const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
     event.stopPropagation();
-    setIsDragOver(true);
+    // setIsDragOver(true);
   };
 
   // When the drag leaves the drop zone
   const handleDragLeave = (event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
     event.stopPropagation();
-    setIsDragOver(false);
+    // setIsDragOver(false);
   };
 
   // Append dropped files to the list
   const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
     event.stopPropagation();
-    setIsDragOver(false);
+    // setIsDragOver(false);
 
     if (event.dataTransfer.files && event.dataTransfer.files.length > 0) {
       setFiles((prevFiles) => [
@@ -60,12 +60,12 @@ function Agent() {
   };
 
   // Change the dashed border color when dragging over
-  const borderColor = isDragOver ? "#007AFF" : "#cccccc";
+  // const borderColor = isDragOver ? "#007AFF" : "#cccccc";
 
   return (
     <Container ml={"30px"} mt={"100px"}>
       <HStack>
-        <Image mr={"5px"} asChild>
+        <Image alt="file icon" mr={"5px"} asChild>
           <NextImage
             width={25}
             height={25}
@@ -97,7 +97,7 @@ function Agent() {
           fontSize={"13px"}
           h={"35px"}
         >
-          <Image asChild>
+          <Image alt="Odion logo" asChild>
             <NextImage
               width={15}
               height={15}
@@ -173,7 +173,7 @@ function Agent() {
             onDragLeave={handleDragLeave}
             onDrop={handleDrop}
           >
-            <Image width={"80px"} height={"80px"} asChild>
+            <Image alt="file icon" width={"80px"} height={"80px"} asChild>
               <NextImage
                 width={50}
                 height={50}

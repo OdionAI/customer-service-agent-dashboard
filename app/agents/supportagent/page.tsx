@@ -4,14 +4,12 @@ import {
   Box,
   Button,
   Container,
-  Tabs,
   HStack,
   Text,
   Input,
   NativeSelect,
 } from "@chakra-ui/react";
 import React from "react";
-import { useColorModeValue } from "@/components/ui/color-mode";
 import { Image } from "@chakra-ui/react";
 import NextImage from "next/image";
 
@@ -19,7 +17,7 @@ function Dashboard() {
   return (
     <Container ml={"30px"} mt={"100px"}>
       <HStack>
-        <Image mr={"5px"} asChild>
+        <Image alt={`settings icon`} mr={"5px"} asChild>
           <NextImage
             width={25}
             height={25}
@@ -51,7 +49,7 @@ function Dashboard() {
           fontSize={"13px"}
           h={"35px"}
         >
-          <Image asChild>
+          <Image alt={`Odion logo`} asChild>
             <NextImage
               width={15}
               height={15}
@@ -65,7 +63,7 @@ function Dashboard() {
       <Box mt={"30px"}>
         <Text mb={"10px"}>Name</Text>
         <Text mb={"20px"} color={"#808080"} fontSize={"14px"}>
-          Your AI Agent's Name
+          Your AI Agent&apos;s Name
         </Text>
         <Input
           border={"1px solid #D9D9D9"}

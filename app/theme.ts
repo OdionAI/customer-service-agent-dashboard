@@ -1,6 +1,6 @@
 import { defineConfig } from "@chakra-ui/react";
 
-const theme = defineConfig({
+export const theme = defineConfig({
   theme: {
     textStyles: {
       fonts: {

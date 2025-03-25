@@ -1,12 +1,10 @@
 import React from "react";
 import {
   HStack,
-  Grid,
   Flex,
   Textarea,
   IconButton,
   createListCollection,
-  Box,
 } from "@chakra-ui/react";
 import { Field } from "@/components/ui/field";
 import { useColorModeValue } from "@/components/ui/color-mode";
@@ -19,7 +17,6 @@ import { AIIconWhite } from "./Icons/AIIconWhite";
 import {
   SelectContent,
   SelectItem,
-  SelectLabel,
   SelectRoot,
   SelectTrigger,
   SelectValueText,

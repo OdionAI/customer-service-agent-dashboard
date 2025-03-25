@@ -5,10 +5,8 @@ import {
   Container,
   HStack,
   Text,
-  Tabs,
   Flex,
   Input,
-  Textarea,
   Field,
   NativeSelect,
 } from "@chakra-ui/react";
@@ -20,7 +18,7 @@ function Tools() {
   return (
     <Container ml={"30px"} mt={"100px"}>
       <HStack>
-        <Image mr={"15px"} asChild>
+        <Image alt="file icon" mr={"15px"} asChild>
           <NextImage
             width={25}
             height={25}
@@ -49,7 +47,7 @@ function Tools() {
           borderRadius={"100px"}
           paddingX={"15px"}
         >
-          <Image asChild>
+          <Image alt="Odion logo" asChild>
             <NextImage
               width={15}
               height={15}

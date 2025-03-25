@@ -6,7 +6,7 @@ import React from "react";
 import { useColorModeValue } from "@/components/ui/color-mode";
 import supportIcon from "@/public/icons/support_icon.svg";
 
-function page() {
+function Home() {
   const bg = useColorModeValue("#FFFFFF", "#333333");
   const textColor = useColorModeValue("#333333", "#FFFFFF");
 
@@ -74,4 +74,4 @@ function page() {
   );
 }
 
-export default page;
+export default Home;

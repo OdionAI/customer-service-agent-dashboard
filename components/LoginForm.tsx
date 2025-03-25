@@ -4,7 +4,6 @@ import {
   defineStyle,
   Fieldset,
   Input,
-  Stack,
   Field,
 } from "@chakra-ui/react";
 import { useColorModeValue } from "./ui/color-mode";
@@ -13,7 +12,6 @@ import { useColorModeValue } from "./ui/color-mode";
 
 export const LoginForm = () => {
   const bg = useColorModeValue("#FFFFFF", "#333333");
-  const inputBg = useColorModeValue("#F9F9FA", "#2A2A2A");
   const textColor = useColorModeValue("#333333", "#FFFFFF");
 
   //   const floatingStyles = defineStyle({

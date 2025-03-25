@@ -32,7 +32,7 @@ function DashboardMenu({ text, icon, link }: DashboardMenuProps) {
         bg={bgColor}
         aspectRatio={"191/156"}
       >
-        <Image asChild>
+        <Image alt="agent icon" asChild>
           <NextImage width={30} height={30} src={icon} alt="agent icon" />
         </Image>
         <Text color={textColor}>{text}</Text>

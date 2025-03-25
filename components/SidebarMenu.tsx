@@ -1,21 +1,18 @@
 "use client";
 
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import React from "react";
 import { Image } from "@chakra-ui/react";
 import NextImage from "next/image";
-import { useColorModeValue } from "@/components/ui/color-mode";
 import { usePathname, useRouter } from "next/navigation";
 
 interface SidebarMenuProps {
   title: string;
   icon: string;
   link: string;
-  isCollapsed: boolean;
 }
 
-function SidebarMenu({ title, link, icon, isCollapsed }: SidebarMenuProps) {
-  const textColor = useColorModeValue("#333333", "#FFFFFF");
+function SidebarMenu({ title, link, icon }: SidebarMenuProps) {
   const pathname = usePathname();
   const router = useRouter();
 
@@ -33,7 +30,7 @@ function SidebarMenu({ title, link, icon, isCollapsed }: SidebarMenuProps) {
         transition="all 0.3s ease"
       >
         <Box flexShrink="0" bg="#EBEBEB" borderRadius="12px" padding="10px">
-          <Image asChild>
+          <Image alt={`${title} icon`} asChild>
             <NextImage
               width={20}
               height={20}
@@ -43,11 +40,11 @@ function SidebarMenu({ title, link, icon, isCollapsed }: SidebarMenuProps) {
           </Image>
         </Box>
         {/* Render the title only when not collapsed */}
-        {!isCollapsed && (
+        {/* {!isCollapsed && (
           <Text fontSize="13px" md={{ fontSize: "16px" }} color={textColor}>
             {title}
           </Text>
-        )}
+        )} */}
       </Flex>
     </Box>
   );

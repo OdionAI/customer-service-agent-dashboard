@@ -1,15 +1,13 @@
 "use client";
 
-import { Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import React from "react";
-import { ColorModeButton, useColorModeValue } from "./ui/color-mode";
+import { ColorModeButton } from "./ui/color-mode";
 import { Image } from "@chakra-ui/react";
 import { usePathname } from "next/navigation";
 
 import NextImage from "next/image";
 function Navbar() {
-  const bg = useColorModeValue("#FFFFFF", "#333333");
-  const textColor = useColorModeValue("#333333", "#FFFFFF");
   const pathname = usePathname();
 
   return (
@@ -27,7 +25,7 @@ function Navbar() {
             alignItems={"center"}
             justifyContent={"space-between"}
           >
-            <Image asChild>
+            <Image alt="odion logo" asChild>
               <NextImage
                 width={30}
                 height={30}

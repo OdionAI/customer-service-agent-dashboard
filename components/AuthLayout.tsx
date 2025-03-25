@@ -1,6 +1,5 @@
-import { Box, Container, Flex, Heading, VStack } from "@chakra-ui/react";
-import { ColorModeButton } from "@/components/ui/color-mode";
-import { useColorMode, useColorModeValue } from "@/components/ui/color-mode";
+import { Container, Flex, Heading, VStack } from "@chakra-ui/react";
+import { useColorModeValue } from "@/components/ui/color-mode";
 import { Image } from "@chakra-ui/react";
 
 import NextImage from "next/image";
@@ -33,7 +32,7 @@ export default function AuthLayout({ children, title }: AuthLayoutProps) {
           //   borderWidth="1px"
           //   borderColor={borderColor}
         >
-          <Image asChild>
+          <Image alt="odion logo" asChild>
             <NextImage
               width={30}
               height={30}
