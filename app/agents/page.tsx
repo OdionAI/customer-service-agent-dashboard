@@ -24,8 +24,6 @@ function Home() {
   const textColor = useColorModeValue("#333333", "#FFFFFF");
   const [selectedAgent, setSelectedAgent] = useState("");
 
-  const [selectedOption, setSelectedOption] = useState<string>("");
-
   useEffect(() => {
     console.log(selectedAgent);
   }, [selectedAgent]);
