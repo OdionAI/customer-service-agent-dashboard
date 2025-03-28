@@ -5,7 +5,7 @@ import { Box, Flex, VStack, Input, Button, Text } from "@chakra-ui/react";
 import { useState, useRef, useEffect } from "react";
 import { useColorModeValue } from "../../components/ui/color-mode";
 
-interface Message {
+export interface Message {
   id: string;
   text: string;
   isUser: boolean;

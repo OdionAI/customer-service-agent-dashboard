@@ -6,9 +6,9 @@ import {
   Text,
   Flex,
   VStack,
+  Image,
 } from "@chakra-ui/react";
 import { Code } from "@chakra-ui/react";
-import { Image } from "@chakra-ui/react";
 import NextImage from "next/image";
 
 function Integrations() {
@@ -26,7 +26,7 @@ function Integrations() {
         <Text color={"#000000"} mr={"40px"} fontSize={"32px"}>
           Integrations
         </Text>
-        <Button
+        {/* <Button
           bg={"#007AFF"}
           color={"white"}
           borderRadius={"100px"}
@@ -37,7 +37,7 @@ function Integrations() {
           mr={"5px"}
         >
           Save Changes
-        </Button>
+        </Button> */}
       </HStack>
       <Flex
         position="relative"
