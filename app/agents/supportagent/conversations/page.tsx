@@ -4,8 +4,6 @@ import {
   Container,
   HStack,
   Text,
-  Button,
-  Image,
   Box,
   Table,
   Drawer,
@@ -13,7 +11,6 @@ import {
   CloseButton,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import NextImage from "next/image";
 import { BiMessageAdd } from "react-icons/bi";
 
 function Conversations() {

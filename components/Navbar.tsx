@@ -132,9 +132,9 @@ function Navbar() {
                               maxW="70%"
                             >
                               <Text>{message.text}</Text>
-                              <Text fontSize="xs" opacity={0.8} mt={1}>
+                              {/* <Text fontSize="xs" opacity={0.8} mt={1}>
                                 {message.timestamp.toLocaleTimeString()}
-                              </Text>
+                              </Text> */}
                             </Box>
                           ))}
                           <div ref={messagesEndRef} />
