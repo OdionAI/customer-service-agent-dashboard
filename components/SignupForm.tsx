@@ -7,7 +7,6 @@ import {
   Fieldset,
   Input,
   Field,
-  Text,
 } from "@chakra-ui/react";
 import { useColorModeValue } from "./ui/color-mode";
 import { useState } from "react";
