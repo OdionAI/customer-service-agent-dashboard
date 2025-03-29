@@ -14,38 +14,6 @@ export const LoginForm = () => {
   const bg = useColorModeValue("#FFFFFF", "#333333");
   const textColor = useColorModeValue("#333333", "#FFFFFF");
 
-  //   const floatingStyles = defineStyle({
-  //     pos: "absolute",
-  //     bg: "transparent", // Changed to transparent background
-  //     px: "0.5",
-  //     top: "-3",
-  //     color: useColorModeValue("blue.500", "blue.200"), // Theme-aware color
-  //     // fontSize: "14px",
-  //     insetStart: "2",
-  //     fontWeight: "normal",
-  //     border: "1px solid red",
-  //     pointerEvents: "none",
-  //     transition: "all 0.2s ease-in-out", // Added proper transition
-  //     zIndex: 1, // Ensure label stays above input
-
-  //     _peerPlaceholderShown: {
-  //       color: "gray.500", // Different color for placeholder state
-  //       top: "2.5",
-  //       //   transform: "translateY(-50%)",
-  //       insetStart: "3",
-  //       //   fontSize: "14px", // Match input text size
-  //     },
-
-  //     _peerFocusVisible: {
-  //       color: useColorModeValue("blue.500", "blue.200"), // Theme-aware color
-  //       top: "-3",
-  //       //   transform: "translateY(-30%)", // Move up slightly
-  //       insetStart: "2",
-  //       //   fontSize: "12px", // Smaller size when elevated
-  //       bg: useColorModeValue("white", "gray.800"), // Background to overlap input border
-  //     },
-  //   });
-
   const floatingStyles = defineStyle({
     pos: "absolute",
     bg,

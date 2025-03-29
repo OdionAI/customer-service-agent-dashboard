@@ -23,7 +23,7 @@ export default function AuthLayout({ children, title }: AuthLayoutProps) {
       //   py={12}
       //   px={4}
     >
-      <Container maxW="md">
+      <Container maxW="xl">
         <VStack
           //   bg={cardBgColor}
           rounded="lg"
