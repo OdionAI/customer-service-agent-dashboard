@@ -7,6 +7,7 @@ import {
   Fieldset,
   Input,
   Field,
+  Text,
 } from "@chakra-ui/react";
 import { useColorModeValue } from "./ui/color-mode";
 import { useState } from "react";
@@ -83,6 +84,7 @@ export const SignupForm = () => {
 
         {/* OTP Input Field (animated) */}
         {/* <Collapse in={showOTP} animateOpacity> */}
+        {/* {showOTP && <Text> Type in OTP sent to your</Text>} */}
         {showOTP && (
           <Field.Root mt={4}>
             <Box pos="relative" w="full">
@@ -98,7 +100,9 @@ export const SignupForm = () => {
                 border="1px solid #007AFF"
                 _placeholder={{ fontSize: "14px" }}
               />
-              <Field.Label css={floatingStyles}>OTP</Field.Label>
+              <Field.Label css={floatingStyles}>
+                Type in OTP sent to your email
+              </Field.Label>
             </Box>
           </Field.Root>
         )}
