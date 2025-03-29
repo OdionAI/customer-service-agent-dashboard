@@ -82,9 +82,6 @@ export const SignupForm = () => {
           </Box>
         </Field.Root>
 
-        {/* OTP Input Field (animated) */}
-        {/* <Collapse in={showOTP} animateOpacity> */}
-        {/* {showOTP && <Text> Type in OTP sent to your</Text>} */}
         {showOTP && (
           <Field.Root mt={4}>
             <Box pos="relative" w="full">
@@ -106,7 +103,6 @@ export const SignupForm = () => {
             </Box>
           </Field.Root>
         )}
-        {/* </Collapse> */}
       </Fieldset.Content>
 
       {/* Verify Email Button */}
