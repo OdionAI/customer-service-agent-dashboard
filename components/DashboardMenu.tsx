@@ -2,7 +2,7 @@ import { GridItem, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 import { useColorModeValue } from "@/components/ui/color-mode";
 import { useRouter } from "next/navigation";
-
+import { useAgentContext } from "@/context/AgentContext";
 import { Image } from "@chakra-ui/react";
 import NextImage from "next/image";
 import { StaticImageData } from "next/image";
@@ -11,15 +11,25 @@ interface DashboardMenuProps {
   text: string;
   icon: StaticImageData;
   link: string;
+  agentId?: string;
 }
 
-function DashboardMenu({ text, icon, link }: DashboardMenuProps) {
+function DashboardMenu({ text, icon, link, agentId }: DashboardMenuProps) {
   const textColor = useColorModeValue("#000000", "#FFFFFF");
   const bgColor = useColorModeValue("#F9F9FA", "#333333");
   const router = useRouter();
-  console.log(link, "link");
+  const { setSelectedAgent, agents } = useAgentContext();
+
+  const handleClick = () => {
+    const matchingAgent = agents.find((agent) => agent.id === agentId);
+    if (matchingAgent) {
+      setSelectedAgent(matchingAgent);
+    }
+    router.push(link);
+  };
+
   return (
-    <GridItem onClick={() => router.push(link)}>
+    <GridItem onClick={handleClick}>
       <VStack
         justifyContent={"center"}
         alignItems={"center"}

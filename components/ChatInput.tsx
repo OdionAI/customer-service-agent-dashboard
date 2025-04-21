@@ -42,6 +42,14 @@ function ChatInput() {
       { label: "All", value: "svelte" },
     ],
   });
+
+  const prompts = [
+    "Summarize key market trends for Q1.",
+    "Draft a brief report on quarterly earnings.",
+    "List the top-performing sectors in the current market.",
+    "Outline the latest interest rate developments.",
+    "Provide an analysis of emerging market risks.",
+  ];
   return (
     <>
       <Flex
@@ -111,12 +119,9 @@ function ChatInput() {
         </Flex>
       </Flex>
       <Flex pt={"20px"} w="100%" overflow={"scroll"} gap={"10px"}>
-        <SamplePrompt />
-        <SamplePrompt />
-        <SamplePrompt />
-        <SamplePrompt />
-        <SamplePrompt />
-        <SamplePrompt />
+        {prompts.map((prompt) => (
+          <SamplePrompt key={prompt} prompt={prompt} />
+        ))}
       </Flex>
     </>
   );

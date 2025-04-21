@@ -1,46 +1,58 @@
 "use client";
 
+import { useLayoutEffect } from "react";
 import { Box, Container, VStack, Text, Grid, Flex } from "@chakra-ui/react";
 import { useColorModeValue } from "@/components/ui/color-mode";
 import DashboardMenu from "@/components/DashboardMenu";
 import ChatInput from "@/components/ChatInput";
 import agentIcon from "@/public/icons/agent_icon.svg";
-import billingIcon from "@/public/icons/billing_icon.svg";
-import billingWhiteIcon from "@/public/icons/billing_white_icon.svg";
-import ticketIcon from "@/public/icons/ticket_icon.svg";
-import ticketWhiteIcon from "@/public/icons/ticket_white_icon.svg";
+// import billingIcon from "@/public/icons/billing_icon.svg";
+// import billingWhiteIcon from "@/public/icons/billing_white_icon.svg";
+// import ticketIcon from "@/public/icons/ticket_icon.svg";
+// import ticketWhiteIcon from "@/public/icons/ticket_white_icon.svg";
 import usersIcon from "@/public/icons/users_icon.svg";
 import usersWhiteIcon from "@/public/icons/users_white_icon.svg";
+import { useUserContext } from "@/context/UserContext";
+import { redirect } from "next/navigation";
 
 export default function Home() {
   const bg = useColorModeValue("#F9F9FA", "#333333");
   const cardBg = useColorModeValue("#FFFFFF", "#2A2A2A");
   const textColor = useColorModeValue("#333333", "#FFFFFF");
-  const ticket_Icon = useColorModeValue(ticketIcon, ticketWhiteIcon);
-  const billing_Icon = useColorModeValue(billingIcon, billingWhiteIcon);
+  // const ticket_Icon = useColorModeValue(ticketIcon, ticketWhiteIcon);
+  // const billing_Icon = useColorModeValue(billingIcon, billingWhiteIcon);
   const users_Icon = useColorModeValue(usersIcon, usersWhiteIcon);
+  const { user } = useUserContext();
   const dashboardMenu = [
     {
       text: "AI Agents",
       icon: agentIcon,
       link: "/agents",
     },
-    {
-      text: "Ticket Copilot",
-      icon: ticket_Icon,
-      link: "/agents",
-    },
-    {
-      text: "Billing",
-      icon: billing_Icon,
-      link: "/agents",
-    },
+    // {
+    //   text: "Ticket Copilot",
+    //   icon: ticket_Icon,
+    //   link: "/agents",
+    // },
+    // {
+    //   text: "Billing",
+    //   icon: billing_Icon,
+    //   link: "/agents",
+    // },
     {
       text: "User & Access",
       icon: users_Icon,
-      link: "/agents",
+      link: "/useraccess",
     },
   ];
+
+  useLayoutEffect(() => {
+    console.log(user, "this is user");
+    if (!user) {
+      redirect("/signup");
+    }
+  }, [user]);
+
   return (
     <Flex
       justifyContent={"center"}

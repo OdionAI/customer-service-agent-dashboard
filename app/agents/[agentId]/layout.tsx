@@ -5,6 +5,7 @@ import { useColorModeValue } from "@/components/ui/color-mode";
 import { supportNavigationItems } from "@/utils/constants";
 import { Box, Flex, VStack, Image } from "@chakra-ui/react";
 import NextImage from "next/image";
+import { useParams } from "next/navigation";
 
 export default function DashboardLayout({
   children,
@@ -13,6 +14,8 @@ export default function DashboardLayout({
 }) {
   const bg = useColorModeValue("#FFFFFF", "#333333");
   // const [isCollapsed, setIsCollapsed] = useState(false);
+  const params = useParams();
+  const agentId = params.agentId as string;
 
   return (
     <Flex bg={bg}>
@@ -48,7 +51,7 @@ export default function DashboardLayout({
             <SidebarMenu
               key={item.title}
               title={item.title}
-              link={item.link}
+              link={`/agents/${agentId}/${item.link}`}
               icon={item.icon}
               // isCollapsed={isCollapsed}
             />
