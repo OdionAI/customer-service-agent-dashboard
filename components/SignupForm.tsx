@@ -240,7 +240,7 @@ export const SignupForm = () => {
     isLoading = generateOtpMutation.isPending;
     loadingText = generateOtpMutation.isPending
       ? "Generating OTP..."
-      : "Generate OTP";
+      : "Register";
   } else if (showOtpInput && !otpVerified) {
     isLoading = verifyOtpMutation.isPending;
     loadingText = verifyOtpMutation.isPending
